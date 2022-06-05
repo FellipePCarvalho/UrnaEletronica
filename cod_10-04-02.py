@@ -90,7 +90,6 @@ else:
         if escolhaMenu == 0:
             # VALIDANDO CARACTERES NOME
             while True:
-                print('-' * 25)
                 nome = input("Nome: ")
 
                 # OBSERVAÇÃO: Ideologia -> Em prol da verificação de variavel nula
@@ -121,7 +120,7 @@ else:
             while True:
                 try:
                     numero = int(input("Número: "))
-                    if not numero in range(0, 99999) or numero in listaNumeros:  # IDENTIFICANDO SE NUMERO ESTÁ NO RANGE
+                    if not numero in range(0, 100000) or numero in listaNumeros:  # IDENTIFICANDO SE NUMERO ESTÁ NO RANGE
                         raise ValueError()  # SE N ESTIVER NO RANGE, VAI IDENTIFICAR COMO ERRO
                 except ValueError as num:  # SOLICITANDO ENTRADA DE NOVO DADO DEVIDO AO ERRO
                     print('-' * 33)
@@ -187,7 +186,6 @@ else:
                     print('-' * 33)
                 else:
                     break  # DIGITAÇÃO CORRETA SAI DO LOOP
-            print('-' * 25)
 
             # SE ESCOLHA VOTAR
             if opcao == 0:
@@ -212,7 +210,7 @@ else:
                 while True:
                     try:
                         voto = int(input('\nVoto Candidato (número): '))
-                        if not voto in range(0, 99999):  # IDENTIFICANDO SE NUMERO ESTÁ NO RANGE
+                        if not voto in range(0, 100000):  # IDENTIFICANDO SE NUMERO ESTÁ NO RANGE
                             raise ValueError()  # SE N ESTIVER NO RANGE, VAI IDENTIFICAR COMO ERRO
                     except ValueError as num:  # SOLICITANDO ENTRADA DE NOVO DADO DEVIDO AO ERRO
                         print('-' * 32)
@@ -232,9 +230,9 @@ else:
                     if totalDeVotosAtual > maiorNumVotosCamp:
                         maiorNumVotosCamp = totalDeVotosAtual
                 else:
-                    print('=' * 24)
-                    print('Candidato não existente')
-                    print('=' * 24)
+                    print('=' * 33)
+                    print(' '*4, f"Candidato não existente")
+                    print('=' * 33)
 
             # SE ESCOLHA NULO
             elif opcao == 1:
@@ -359,9 +357,9 @@ if escolhaMenu == 3:
         print(' ' * 5, f"{cor['negrito']}" '=' * 51)
         print(f"{formatacao:18}HOUVE EMPATE, {cor['vermeNeg']} SEM GANHADOR {cor['fimCor']}", end=" ")
 
-    else:
         # CAMPEÃO
         # IMPRESSÃO TITULO CAMPEÃO
+    else:
         print(' ' * 5, f"{cor['negrito']}" '=' * 51)
         print(' ' * 28, f"{cor['laranNeg']}"'CAMPEÃO' f"{cor['fimCor']}")
         print(' ' * 5, f"{cor['negrito']}" '=' * 51)
