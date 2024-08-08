@@ -10,7 +10,8 @@
 
 ### Desafios tratados na tarefa
 
-```Desenvolva um programa em python que simule uma urna eletrônica para a votação em candidatos ao cargo de governador. 
+```
+Desenvolva um programa em python que simule uma urna eletrônica para a votação em candidatos ao cargo de governador. 
 O programa ao ser executado deve apresentar uma estrutura de menu que contenha as seguintes opções que podem ser escolhidas
 pelo usuário :
 • Cadastrar Candidato (cada candidato deve ter nome, partido e número)
